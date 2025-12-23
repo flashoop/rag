@@ -1,0 +1,113 @@
+{
+  "description": "Test queries for RAG system evaluation",
+  "queries": [
+    {
+      "id": 1,
+      "query": "How to enumerate LDAP users?",
+      "category": "enumeration",
+      "expected_services": ["ldap"],
+      "expected_tools": ["ldapsearch", "nmap"]
+    },
+    {
+      "id": 2,
+      "query": "What are the nmap commands for port scanning?",
+      "category": "enumeration",
+      "expected_services": [],
+      "expected_tools": ["nmap"]
+    },
+    {
+      "id": 3,
+      "query": "如何使用mimikatz提取密码?",
+      "category": "post-exploit",
+      "language": "zh",
+      "expected_tools": ["mimikatz"]
+    },
+    {
+      "id": 4,
+      "query": "Show me SQL injection examples",
+      "category": "foothold",
+      "expected_techniques": ["sql injection", "sqli"],
+      "expected_tools": ["sqlmap"]
+    },
+    {
+      "id": 5,
+      "query": "Explain Kerberoasting attack",
+      "category": "lateral_movement",
+      "expected_techniques": ["kerberoasting"],
+      "expected_tools": ["rubeus", "impacket"]
+    },
+    {
+      "id": 6,
+      "query": "What tools can I use for SMB enumeration?",
+      "category": "enumeration",
+      "expected_services": ["smb"],
+      "expected_tools": ["smbclient", "enum4linux", "crackmapexec"]
+    },
+    {
+      "id": 7,
+      "query": "PowerView commands for domain enumeration",
+      "category": "enumeration",
+      "expected_tools": ["powerview"],
+      "expected_techniques": ["active directory enumeration"]
+    },
+    {
+      "id": 8,
+      "query": "How to perform AS-REP roasting?",
+      "category": "foothold",
+      "expected_techniques": ["as-rep roasting"],
+      "expected_tools": ["rubeus", "impacket"]
+    },
+    {
+      "id": 9,
+      "query": "Windows privilege escalation with SUID binaries",
+      "category": "privesc",
+      "expected_techniques": ["suid exploitation", "path hijacking"]
+    },
+    {
+      "id": 10,
+      "query": "Port forwarding commands for pivoting",
+      "category": "lateral_movement",
+      "expected_techniques": ["port forwarding", "pivoting"],
+      "expected_tools": ["chisel", "ssh", "socat"]
+    },
+    {
+      "id": 11,
+      "query": "Python capabilities privilege escalation",
+      "category": "privesc",
+      "expected_techniques": ["capabilities", "cap_setuid"],
+      "expected_tools": ["python", "getcap"]
+    },
+    {
+      "id": 12,
+      "query": "Log poisoning LFI attack",
+      "category": "foothold",
+      "expected_techniques": ["lfi", "log poisoning"],
+      "expected_services": ["http", "apache"]
+    },
+    {
+      "id": 13,
+      "query": "Java RMI exploitation techniques",
+      "category": "foothold",
+      "expected_services": ["java rmi", "jmx"],
+      "expected_tools": ["beanshooter"]
+    },
+    {
+      "id": 14,
+      "query": "How to use linpeas for enumeration?",
+      "category": "enumeration",
+      "expected_tools": ["linpeas"]
+    },
+    {
+      "id": 15,
+      "query": "IDOR vulnerability examples",
+      "category": "foothold",
+      "expected_techniques": ["idor", "insecure direct object reference"]
+    }
+  ],
+  "evaluation_criteria": {
+    "relevance_threshold": 0.65,
+    "minimum_results": 1,
+    "maximum_results": 5,
+    "expected_latency_ms": 100
+  }
+}

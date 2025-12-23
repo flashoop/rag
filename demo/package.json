@@ -1,0 +1,37 @@
+{
+  "name": "rag-demo",
+  "version": "1.0.0",
+  "description": "Demo and testing suite for RAG implementations (Qdrant vs Knowledge MCP Server)",
+  "main": "index.js",
+  "scripts": {
+    "test:qdrant": "tsx test-qdrant-rag.ts",
+    "test:knowledge": "tsx test-knowledge-mcp.ts",
+    "test:comparison": "tsx test-comparison.ts",
+    "test:all": "npm run test:qdrant && npm run test:knowledge && npm run test:comparison",
+    "build": "tsc",
+    "clean": "rm -rf qdrant_storage data ../qdrant_storage ../data"
+  },
+  "keywords": [
+    "rag",
+    "vector-database",
+    "qdrant",
+    "sqlite",
+    "fts5",
+    "knowledge-base",
+    "bug-bounty"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@qdrant/js-client-rest": "^1.7.0",
+    "better-sqlite3": "^9.2.2",
+    "dotenv": "^16.3.1",
+    "openai": "^4.20.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.8",
+    "@types/node": "^20.10.6",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
