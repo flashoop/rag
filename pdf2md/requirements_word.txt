@@ -1,0 +1,38 @@
+# Word to Markdown Converter - Dependencies
+
+# Method 1: mammoth (Recommended - Pure Python)
+# Good balance of quality and ease of use
+mammoth>=1.6.0
+
+# Method 2: python-docx + markdownify (Good for tables)
+# Excellent table handling and structure preservation
+python-docx>=1.1.0
+markdownify>=0.11.6
+
+# Method 3: pandoc (Best quality - requires system installation)
+# Best overall quality but requires separate installation
+# Install from: https://pandoc.org/installing.html
+# macOS: brew install pandoc
+# Ubuntu: sudo apt-get install pandoc
+# Windows: Download from https://pandoc.org/
+
+# Optional: Enhanced processing
+# lxml>=4.9.0  # Better XML parsing
+# beautifulsoup4>=4.12.0  # HTML processing
+
+# Installation instructions:
+#
+# Basic installation (choose one):
+#   pip install mammoth                 # Pure Python (recommended)
+#   pip install python-docx markdownify  # Good for tables
+#   Install pandoc system package        # Best quality
+#
+# Install all Python methods:
+#   pip install -r requirements_word.txt
+#
+# Full setup (with pandoc):
+#   pip install -r requirements_word.txt
+#   # Then install pandoc:
+#   # macOS: brew install pandoc
+#   # Ubuntu: sudo apt-get install pandoc
+#   # Windows: https://github.com/jgm/pandoc/releases

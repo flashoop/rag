@@ -1,0 +1,49 @@
+# PDF to Markdown Converter - Dependencies
+
+# Method 1: pymupdf4llm (Recommended - Best quality)
+# Preserves document structure, formatting, and layout
+pymupdf4llm>=0.0.5
+
+# Method 2: pdfplumber (Good for tables)
+# Excellent table extraction and layout analysis
+pdfplumber>=0.10.0
+
+# Method 3: PyPDF2 (Fallback - Basic extraction)
+# Simple text extraction for basic PDFs
+PyPDF2>=3.0.0
+
+# Optional: Enhanced PDF processing
+# Uncomment if needed
+
+# PDF layout analysis
+# pdfminer.six>=20221105
+
+# OCR support (for scanned PDFs)
+# pytesseract>=0.3.10
+# pdf2image>=1.16.3
+# Pillow>=10.0.0
+
+# Advanced processing
+# pypdf>=3.17.0
+# reportlab>=4.0.0  # For PDF generation
+
+# Progress bars
+tqdm>=4.66.0
+
+# Installation instructions:
+#
+# Basic installation (choose one):
+#   pip install pymupdf4llm      # Best quality (recommended)
+#   pip install pdfplumber        # Good for tables
+#   pip install PyPDF2            # Basic extraction
+#
+# Install all methods:
+#   pip install -r requirements.txt
+#
+# With OCR support (for scanned PDFs):
+#   pip install -r requirements.txt
+#   pip install pytesseract pdf2image
+#   # Also install tesseract system package:
+#   # macOS: brew install tesseract
+#   # Ubuntu: sudo apt-get install tesseract-ocr
+#   # Windows: Download from https://github.com/UB-Mannheim/tesseract/wiki
